@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Heebo|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Codystar|Josefin+Slab&display=swap");
+@import url("/font-awesome-4.6.3/css/font-awesome.min.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Oswald", sans-serif;
+  color: whitesmoke;
+}
+
+body {
+  background-color: #36393f;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: red;
+}
+
+.main-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-footer .side {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.social span {
+  height: 40px;
+  width: 40px;
+  background-color: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.social span:hover {
+  background: blue;
+}
+
+@media (max-width: 650px) {
+  .main-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
