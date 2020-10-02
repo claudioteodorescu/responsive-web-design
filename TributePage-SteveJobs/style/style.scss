@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+@import url("/font-awesome-4.6.3/css/font-awesome.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+  font-size: 100%;
+  color: #1e272e;
+  padding: 3em;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size-adjust: 0.5;
+}
+#main {
+  font-size: 1em;
+  line-height: 1.25;
+  padding: 3em;
+  border-radius: 0.4em;
+  margin: auto;
+  width: 88%;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#main:after {
+  content: "";
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  #main {
+    width: 100%;
+    margin: 0;
+    padding: 1px;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 43.75em) {
+  #main {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+
+#title {
+  text-align: center;
+  margin-top: -25px;
+  h3 {
+    font-style: italic;
+    margin-top: -25px;
+  }
+}
+
+#tribute-info {
+  margin: 35px 10px;
+  border-top: 4px double;
+}
+
+#headline {
+  text-align: center;
+  font-kerning: normal;
+  letter-spacing: 0.1em;
+  padding: 15px;
+}
+
+p {
+  color: hsl(86, 37%, 1%);
+}
+
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */
+}
+
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height 
+    and something more appropriate for display headings */
+  }
+}
+
+h2 {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */
+}
+
+@media (min-width: 43.75em) {
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */
+}
+
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+#img-div {
+  border-radius: 50%;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  margin-bottom: 25px;
+  margin: auto;
+  padding: 1px;
+}
+
+#img-caption {
+  text-align: center;
+  padding: 5px;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  #img-caption {
+    width: 100%;
+  }
+}
+
+img {
+  border-radius: 50%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+// Image Hover
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.pic {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .pic {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-size: 1.4vw;
+}
+
+//Timeline
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.box {
+  padding: 5px 20px;
+  position: relative;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.box::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #f7b731;
+  border: 4px solid rgb(48, 67, 82);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent black;
+  opacity: 0.2;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent;
+  opacity: 0.2;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+
+.content {
+  padding: 20px 30px;
+  background-color: inherit;
+  position: relative;
+  border: 0.5px double rgb(48, 67, 82);
+  border-radius: 6px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.content:hover {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media screen and (max-width: 900px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .box {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .box::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+// Quote
+
+// Just to make it a bit nice
+
+.wrap {
+  margin: 40px 10px;
+  border-top: 4px double;
+  padding: 5% 20%;
+  font-family: "Special Elite", cursive;
+}
+
+// Now that is interesting
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #f7b731 0, #f7b731 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+  &:hover {
+    background-size: 100% 100%;
+  }
+
+  &--offset {
+    background-position: 0 0.2em;
+    //didn't find another solution than mask the underline shape by a box shadow with the same color than the bg
+    box-shadow: inset 0 -0.5em 0 0 inherit;
+  }
+}
+
+.cite {
+  font-size: 20px;
+  text-align: center;
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  .wrap {
+    width: 100%;
+    padding: 5px;
+    font-size: 2vw;
+    margin: auto;
+  }
+}
+
+.footer {
+  height: 50px;
+  top: 0;
+  left: 0;
+  margin-top: 100px;
+  margin-bottom: -999999px;
+  margin-left: -9px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+.wiki a {
+  text-decoration: none;
+  border-bottom: 2px solid #f7b731;
+  box-shadow: inset 0 -4px 0 #f7b731;
+  color: inherit;
+  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.wiki a:hover {
+  background: #f7b731;
+}
