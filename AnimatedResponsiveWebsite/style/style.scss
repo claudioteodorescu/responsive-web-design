@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+}
+
+main {
+  font-family: "Poiret One", cursive;
+  color: lightgoldenrodyellow;
+}
+
+.landing {
+  height: 100vh;
+  width: 100%;
+  background: url("/img/airplane.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  li {
+    padding-left: 10rem;
+    font-size: 1.2rem;
+    a {
+      text-decoration: none;
+      color: lightgoldenrodyellow;
+      /*  white-space: nowrap;*/
+    }
+    a:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  padding: 20px;
+}
+
+#logo {
+  display: flex;
+  font-family: "Fredericka the Great", cursive;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.big-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 10vmin;
+  white-space: nowrap;
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 590;
+  color: lightgoldenrodyellow;
+}
+
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .intro-text {
+    color: lightgoldenrodyellow;
+    font-family: "Poiret One", cursive;
+    font-size: 3rem;
+  }
+}
+
+.intro-img {
+  height: 100px;
+  width: 100px;
+  margin-left: -30px;
+}
+
+.slider {
+  background: rgb(29, 28, 28);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+  span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: lightgoldenrodyellow;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+.nav-links.nav-active {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    li {
+      opacity: 1;
+      padding: 5px;
+    }
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle {
+  .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-5px, 6px);
+  }
+}
